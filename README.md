@@ -33,11 +33,6 @@ cd iFlow
 ./build_iflow.sh                                  //运行脚本下载EDA工具
 ```
 
-使用代理下载，代理可自定义。例如代理为hub.fastgit.xyz
-```
-./build_iflow.sh -mirror hub.fastgit.xyz          //运行脚本下载EDA工具
-```
-
 完成后即可使用iFlow。
 
 ## 二、iFlow目录结构
