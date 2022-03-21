@@ -28,7 +28,7 @@ export IFLOW_SHELL_DIR
 export IFLOW_TOOLS_DIR
 export IFLOW_MIRROR_URL
 
-# source $IFLOW_SHELL_DIR/common.sh
+source $IFLOW_SHELL_DIR/common.sh
 
 # essential package
 # RUN sudo apt install build-essential clang libreadline6-dev bison flex libffi-dev cmake libboost-all-dev swig klayout libeigen3-dev libspdlog-dev -y
@@ -54,8 +54,8 @@ export IFLOW_MIRROR_URL
 # }
 
 # update iFlow
-RUN cd $IFLOW_ROOT_DIR
-RUN git pull origin master
+# RUN cd $IFLOW_ROOT_DIR
+# RUN git pull origin master
 
 # install tools
 RUN $IFLOW_SHELL_DIR/install_tools.sh
