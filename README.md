@@ -26,10 +26,6 @@ Library
 ```
 git clone https://github.com/PCNL-EDA/iFlow.git   //构建iFlow目录结构
 cd iFlow
-```
-
-不使用代理下载
-```
 ./build_iflow.sh                                  //运行脚本下载EDA工具
 ```
 
