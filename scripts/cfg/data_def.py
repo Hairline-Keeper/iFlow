@@ -116,7 +116,7 @@ class Flow(object):
             'dplace'    :   'openroad_1.1.0'    ,
             'cts'       :   'openroad_0.9.0'    ,
             'filler'    :   'openroad_1.1.0'    ,
-            'groute'    :   'openroad_1.2.0'    ,
+            'groute'    :   'openroad_1.1.0'    ,
             'droute'    :   'openroad_1.2.0'    ,
             'layout'    :   'klayout_0.26.2'   
         }
