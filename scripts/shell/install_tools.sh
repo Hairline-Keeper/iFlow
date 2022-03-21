@@ -28,14 +28,14 @@ sleep 1
 # RUN cd $IFLOW_ROOT_DIR
 
 # TritonRoute758cdac
-CHECK_DIR $IFLOW_TOOLS_DIR/TritonRoute758cdac || RUN git clone https://${IFLOW_MIRROR_URL}/The-OpenROAD-Project/TritonRoute.git tools/TritonRoute758cdac
-RUN cd $IFLOW_TOOLS_DIR/TritonRoute758cdac
-RUN git checkout 758cdac
+# CHECK_DIR $IFLOW_TOOLS_DIR/TritonRoute758cdac || RUN git clone https://${IFLOW_MIRROR_URL}/The-OpenROAD-Project/TritonRoute.git tools/TritonRoute758cdac
+# RUN cd $IFLOW_TOOLS_DIR/TritonRoute758cdac
+# RUN git checkout 758cdac
 # CHECK_DIR $IFLOW_TOOLS_DIR/TritonRoute758cdac/build || RUN mkdir build
 # RUN cd build 
 # RUN cmake .. 
 # RUN make -j$IFLOW_BUILD_THREAD_NUM
-RUN cd $IFLOW_ROOT_DIR
+# RUN cd $IFLOW_ROOT_DIR
     
 # OpenROAD9295a533
 CHECK_DIR $IFLOW_TOOLS_DIR/OpenROAD9295a533 || RUN git clone https://${IFLOW_MIRROR_URL}/The-OpenROAD-Project/OpenROAD.git tools/OpenROAD9295a533
