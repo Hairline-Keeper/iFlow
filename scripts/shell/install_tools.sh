@@ -65,7 +65,7 @@ RUN cd $IFLOW_ROOT_DIR
 echo ""
 echo "************************************"
 echo "[iFlow Info] Checking... "
-if (CHECK_DIR $IFLOW_ROOT_DIR/tools/yosys4be891e8) && (CHECK_DIR $IFLOW_ROOT_DIR/tools/TritonRoute758cdac) && (CHECK_DIR $IFLOW_ROOT_DIR/tools/OpenROAD9295a533) && (CHECK_DIR $IFLOW_ROOT_DIR/tools/OpenROADae191807); then
+if (CHECK_DIR $IFLOW_ROOT_DIR/tools/OpenROAD9295a533); then
     echo "[iFlow Info] Successful! "
 else
     echo "[iFlow Info] Failed! "
