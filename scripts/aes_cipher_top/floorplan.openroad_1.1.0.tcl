@@ -10,7 +10,8 @@ set DIE_AREA            "0 0 1120 1020.8"
 set CORE_AREA           "10 12 1110 1011.2" 
 set TRACKS_INFO_FILE    "$PROJ_PATH/foundry/$FOUNDRY/tracks.info" 
 set PLACE_SITE          "unit" 
-#set IP_GLOBAL_CFG       "$PROJ_PATH/scripts/$DESIGN/IP_global.cfg"
+set IP_GLOBAL_CFG       "$PROJ_PATH/scripts/$DESIGN/IP_global.cfg"
+set PLACE_DENSITY       "0.4"
 
 #===========================================================
 #   main running
@@ -160,6 +161,30 @@ puts "--------------------------------------------------------------------------
 report_design_area
 
 log_end
+
+proc find_macros {} {
+  set macros ""
+
+  set db [::ord::get_db]
+  set block [[$db getChip] getBlock]
+  foreach inst [$block getInsts] {
+    set inst_master [$inst getMaster]
+
+    # BLOCK means MACRO cells
+    if { [string match [$inst_master getType] "BLOCK"] } {
+      append macros " " $inst
+    }
+  }
+  return $macros
+}
+
+
+if {[find_macros] != ""} {
+  global_placement -overflow 0.1 -density $PLACE_DENSITY 
+  macro_placement -global_config $IP_GLOBAL_CFG
+} else {
+  puts "No macros found: Skipping macro_placement"
+}
 
 # write output
 write_def       $RESULT_PATH/$DESIGN.def
