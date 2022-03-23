@@ -29,6 +29,18 @@ read_sdc $SDC_FILE
 
 set_wire_rc -layer $WIRE_RC_LAYER
 
+# Maintain plot directory
+set PLOT_DIR $env(IFLOW_WORK_PATH)/plot
+set dir_list [list arrow bin cell]
+if {[file exist $PLOT_DIR]} {
+	file delete -force -- {*}[glob -nocomplain -directory $PLOT_DIR *]
+} else {
+	file mkdir $PLOT_DIR
+}
+foreach dir $dir_list {
+	file mkdir $PLOT_DIR/$dir
+}
+
 # global_placement -density $PLACE_DENSITY
 
 global_placement -incremental -overflow 0.1 -density $PLACE_DENSITY
