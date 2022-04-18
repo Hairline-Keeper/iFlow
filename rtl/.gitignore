@@ -2,3 +2,7 @@
 !.gitignore
 !aes_cipher_top
 !aes_cipher_top/*
+!Switch_basic
+!Switch_basic/*
+!Switch_xor
+!Switch_xor/*
