@@ -9,4 +9,14 @@
 !run_flow.py
 !shell
 !shell/*
+!ALU
+!ALU/*
+!Controller
+!Controller/*
+!Switch_basic
+!Switch_basic/*
+!Switch_routing
+!Switch_routing/*
+!Switch_xor
+!Switch_xor/*
 __pycache__

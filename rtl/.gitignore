@@ -6,3 +6,7 @@
 !Switch_basic/*
 !Switch_xor
 !Switch_xor/*
+!ALU
+!ALU/*
+!Controller
+!Controller/*
