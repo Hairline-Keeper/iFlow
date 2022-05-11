@@ -19,4 +19,6 @@
 !Switch_routing/*
 !Switch_xor
 !Switch_xor/*
+!lc3
+!lc3/*
 __pycache__
