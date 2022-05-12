@@ -180,7 +180,18 @@ proc find_macros {} {
 
 
 if {[find_macros] != ""} {
-  global_placement -overflow 0.1 -density $PLACE_DENSITY 
+  # Maintain plot directory
+  set PLOT_DIR $env(IFLOW_WORK_PATH)/plot
+  set dir_list [list arrow bin cell]
+  if {[file exist $PLOT_DIR]} {
+        file delete -force -- {*}[glob -nocomplain -directory $PLOT_DIR *]
+  } else {
+        file mkdir $PLOT_DIR
+  }
+  foreach dir $dir_list {
+        file mkdir $PLOT_DIR/$dir
+  }
+  global_placement -overflow 0.9 -density $PLACE_DENSITY 
   macro_placement -global_config $IP_GLOBAL_CFG
 } else {
   puts "No macros found: Skipping macro_placement"

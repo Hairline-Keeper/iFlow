@@ -10,5 +10,12 @@
 !ALU/*
 !Controller
 !Controller/*
+!Memory
+!Memory/*
+!DataPath
+!DataPath/*
+!Regfile
+!Regfile/*
 !lc3
 !lc3/*
+

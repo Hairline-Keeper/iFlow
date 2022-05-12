@@ -19,6 +19,12 @@
 !Switch_routing/*
 !Switch_xor
 !Switch_xor/*
+!Memory
+!Memory/*
+!DataPath
+!DataPath/*
+!Regfile
+!Regfile/*
 !lc3
 !lc3/*
 __pycache__
